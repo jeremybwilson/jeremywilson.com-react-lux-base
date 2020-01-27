@@ -1,0 +1,78 @@
+{
+  "name": "Lux-Base",
+  "version": "1.0.0",
+  "description": "A boilerplate for creating Node / React apps in record time! -- React, Redux, React-Router (v4), Node, Express",
+  "main": "server/server.js",
+  "scripts": {
+    "build": "webpack --progress",
+    "dev-start": "node dist/bundle.js",
+    "lint": "eslint app",
+    "start": "npm run build && node server/server.js",
+    "test": "jest"
+  },
+  "homepage": "https://github.com/lux-capacitor/lux-base",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lux-capacitor/lux-base.git"
+  },
+  "author": "Brad McGlasson (http://lux-capacitor.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "mailto:bradmcglasson@gmail.com"
+  },
+  "keywords": [
+    "shopify",
+    "lux-capacitor",
+    "react",
+    "react-starter",
+    "redux",
+    "react-router",
+    "webpack",
+    "node",
+    "express"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.10",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "img-loader": "^2.0.0",
+    "jest": "^22.4.4",
+    "lodash": "^4.17.11",
+    "mocha": "^5.0.5",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.10",
+    "postcss-scss": "^1.0.3",
+    "run-sequence": "^1.0.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.16.1",
+    "webpack-cli": "^2.0.8",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-hot-middleware": "^2.21.0"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "babel-loader": "^7.0.0",
+    "body-parser": "^1.18.2",
+    "es6-promise": "^4.2.2",
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "readline-sync": "^1.4.9",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "webpack": "^3.11.0"
+  }
+}

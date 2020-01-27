@@ -8,7 +8,7 @@
 # Project #
 ###################
 node_modules
-node_modules/
+package-lock.json
 dist
 deploy.log
 config/shopify.yml
@@ -16,15 +16,6 @@ npm-debug.log
 .env
 .env.*
 
-
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
 
 # Packages #
 ############
@@ -39,6 +30,14 @@ npm-debug.log
 *.tar
 *.zip
 
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
 # Logs and databases #
 ######################
 *.log
@@ -60,10 +59,15 @@ Thumbs.db
 *.sass-cache*
 .cache/*
 _site
+secrets.json
+.jekyll-metadata
+.ruby-version
+*BACKUP
+.tern-project
 /.idea
 /.vscode
+.babelrc
 .editorconfig
+.eslintrc
 .prettierrc
 .jshintrc
-.babelrc
-package-lock.json
