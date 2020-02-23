@@ -66,8 +66,3 @@ secrets.json
 .tern-project
 /.idea
 /.vscode
-.babelrc
-.editorconfig
-.eslintrc
-.prettierrc
-.jshintrc

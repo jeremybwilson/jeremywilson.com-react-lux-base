@@ -5,7 +5,7 @@ const Server = require( './helpers/expressServer.js' ); // Wrapped Express Serve
 const bodyParser = require( 'body-parser' );  // Lets us parse body JSON from POST requests
 const path = require( 'path' ); // URL Path Helper
 
-const port = process.env.PORT || 8080; // Port config
+const port = process.env.PORT || 8081; // Port config
 const app = Server.app();              // Our Wrapped Express Server start method
 
 
@@ -13,7 +13,7 @@ const app = Server.app();              // Our Wrapped Express Server start metho
 app.use( bodyParser.urlencoded({ extended: false }) );
 app.use( bodyParser.json() );
 
-// MIDDLEWARE : DEV - WEBPACK : Hot Reloading : Dev Builds only 
+// MIDDLEWARE : DEV - WEBPACK : Hot Reloading : Dev Builds only
 if ( process.env.NODE_ENV !== 'production' ) {
   const webpack = require( 'webpack' );
   const webpackDevMiddleware = require( 'webpack-dev-middleware' );

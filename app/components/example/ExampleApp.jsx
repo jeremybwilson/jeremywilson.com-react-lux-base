@@ -1,20 +1,20 @@
-/* 
+/*
  FRONT-END : OS-Node-React : Core 'App' Parent Component
  *
  *   This is the core "App" component in the traditional sense. All actual UI
  *    and front-end-based work will be done inside this component and inward.
- * 
- *    1. Generally, for components that take props in some fashion, you want to 
- *        set the values up in the constructor, as well as doing binds to this 
- *        context here. (In this case, props come from the two wrapping components 
+ *
+ *    1. Generally, for components that take props in some fashion, you want to
+ *        set the values up in the constructor, as well as doing binds to this
+ *        context here. (In this case, props come from the two wrapping components
  *        "AppWrapper.js and "index.jsx" )
  *
  *    2. Render : Here, we are using react-router <Route /> to pass url and page
  *        data to the component as if it were a prop (Ex: 'route.location' )
  *
- *    3. We simplify the layout by moving sub-components into their own files, 
+ *    3. We simplify the layout by moving sub-components into their own files,
  *        so here all we have is a clean structure that implements our various
- *        sub-components "Todo"  
+ *        sub-components "Todo"
  *
 
  REACT-ROUTER (v4) : NOTES
@@ -24,7 +24,7 @@
  *  PATH-LESS ROUTE: <Route component={ ComponentThatUsesRouteData } />
  *      - This is simplest usage of Route-wrapping component, this basically lets the component it wraps
  *        have access to the props.route properties from within itself.
- * 
+ *
  *  STANDARD ROUTE: <Route path="/MyUrl/:myProperty" component={ NamedComponent } />
  *      - Standard usage, passes what component to render on what URL, wont render without the url match
  *
@@ -33,7 +33,7 @@
  *
  ******************************************************************************/
 
-// CORE 
+// CORE
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -105,7 +105,7 @@ class ExampleApp extends Component {
   pushButton() {
     const buttonMsg = this.generateMsg();
     const bgColor = this.generateColor();
-    this.setState({ 
+    this.setState({
       bgColor,
       buttonMsg,
       timesPushed: this.state.timesPushed + 1,
@@ -114,15 +114,15 @@ class ExampleApp extends Component {
 
 
   render() {
-    const { bgColor, buttonMsg, timesPushed } = this.state; //Destructure to not have to repeat "this.state.timesPushed"
+    const { bgColor, buttonMsg, timesPushed } = this.state; // Destructure to not have to repeat "this.state.timesPushed"
     const counter = timesPushed === 0 ? null : ( <div className='times-pushed'>{ timesPushed }</div> );
 
     return (
       <div className="example-app-wrapper font1 animate50" data-component="ExampleApp.jsx" style={{ 'background': bgColor }}>
         <DoNotPushButton push={ this.pushButton } buttonMsg={ buttonMsg } />
-        
+
         { counter }
-        
+
         <FooterPanel />
       </div>
     );
